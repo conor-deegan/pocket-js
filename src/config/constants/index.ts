@@ -7,8 +7,3 @@ export const statusCodes = {
     SERVER_ERROR: 500,
     EXPIRED: 401
 };
-
-// Remove
-export const sampleConstants = {
-    NOT_FOUND: 'Sample not found.'
-};

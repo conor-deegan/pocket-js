@@ -1,12 +1,12 @@
 {
-  "name": "template",
+  "name": "@pocket/pocket-js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon",
-    "build": "rimraf ./build && tsc",
-    "start": "node ./build/server.js",
+    "build": "rimraf ./build && tsc --build",
+    "start": "node ./build/index.js",
     "prepare": "husky install",
     "lint:check": "eslint \"./src/**/*.ts\"",
     "lint:fix": "eslint \"./src/**/*.ts\" --fix",
@@ -15,17 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/conor-deegan/template.git"
+    "url": "git+https://github.com/poolfoundation/pocket-js.git"
   },
   "author": "Conor Deegan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/conor-deegan/template/issues"
+    "url": "https://github.com/poolfoundation/pocket-js/issues"
   },
-  "homepage": "https://github.com/conor-deegan/template#readme",
+  "homepage": "https://github.com/poolfoundation/pocket-js#readme",
   "devDependencies": {
-    "@types/cors": "^2.8.12",
-    "@types/express": "^4.17.14",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.44.0",
     "@typescript-eslint/parser": "^5.44.0",
@@ -42,13 +40,8 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "body-parser": "^1.20.1",
-    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "helmet": "^6.0.1",
     "husky": "^8.0.2",
-    "mongoose": "^6.7.3",
     "prettier": "^2.8.0",
     "winston": "^3.8.2"
   }

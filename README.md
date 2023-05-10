@@ -1,13 +1,11 @@
-# template
+# @pocket/pocket-js
 
-## Run with docker
-
-```
-bash docker-start.sh
-```
-
-### Run dev
+## Install
 
 ```
-npm run dev
+npm install @pocket/pocket-js
 ```
+
+### Configuration
+
+Lorem ipsum
