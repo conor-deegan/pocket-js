@@ -1,0 +1,55 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "rimraf ./build && tsc",
+    "start": "node ./build/server.js",
+    "prepare": "husky install",
+    "lint:check": "eslint \"./src/**/*.ts\"",
+    "lint:fix": "eslint \"./src/**/*.ts\" --fix",
+    "prettier:check": "prettier --config .prettierrc.js \"./src/**/*.+(js|json|ts)\" --check --ignore-unknown",
+    "prettier:fix": "prettier --config .prettierrc.js \"./src/**/*.+(js|json|ts)\" --write --ignore-unknown"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conor-deegan/template.git"
+  },
+  "author": "Conor Deegan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conor-deegan/template/issues"
+  },
+  "homepage": "https://github.com/conor-deegan/template#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "eslint": "^8.28.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "nodemon": "^2.0.20",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "husky": "^8.0.2",
+    "mongoose": "^6.7.3",
+    "prettier": "^2.8.0",
+    "winston": "^3.8.2"
+  }
+}
