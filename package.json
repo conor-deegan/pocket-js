@@ -1,8 +1,9 @@
 {
-  "name": "@pocket/pocket-js",
-  "version": "1.0.0",
+  "name": "@pocket-org/pocket-js",
+  "version": "0.0.12",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "dev": "nodemon",
     "build": "rimraf ./build && tsc --build",
@@ -11,7 +12,8 @@
     "lint:check": "eslint \"./src/**/*.ts\"",
     "lint:fix": "eslint \"./src/**/*.ts\" --fix",
     "prettier:check": "prettier --config .prettierrc.js \"./src/**/*.+(js|json|ts)\" --check --ignore-unknown",
-    "prettier:fix": "prettier --config .prettierrc.js \"./src/**/*.+(js|json|ts)\" --write --ignore-unknown"
+    "prettier:fix": "prettier --config .prettierrc.js \"./src/**/*.+(js|json|ts)\" --write --ignore-unknown",
+    "npm:publish": "npm run build && npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -44,5 +46,13 @@
     "husky": "^8.0.2",
     "prettier": "^2.8.0",
     "winston": "^3.8.2"
-  }
+  },
+  "files": [
+    "README.md",
+    "package.json",
+    "package-lock.json",
+    "build",
+    ".npmignore",
+    ".gitignore"
+  ]
 }

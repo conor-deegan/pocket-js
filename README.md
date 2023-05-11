@@ -3,7 +3,7 @@
 ## Install
 
 ```
-npm install @pocket/pocket-js
+npm install @pocket/pocket-js@latest
 ```
 
 ### Configuration
