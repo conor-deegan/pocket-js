@@ -1,6 +1,6 @@
 enum PocketProfileTypes {
     BASIC = 'BASIC',
-    ADV_NEWS = 'ADV_NEWS'
+    ADVANCED_NEWS = 'ADVANCED_NEWS'
 }
 
 // Handle sign in
