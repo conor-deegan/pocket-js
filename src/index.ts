@@ -1,5 +1,13 @@
+enum PocketProfileTypes {
+    BASIC = 'BASIC',
+    ADV_NEWS = 'ADV_NEWS'
+}
+
 // Handle sign in
-const pocketSignInHanlder = async (name: string) => {
+const pocketSignInHanlder = async (
+    name: string,
+    profileType: PocketProfileTypes
+) => {
     try {
         window.postMessage(
             {
@@ -8,7 +16,8 @@ const pocketSignInHanlder = async (name: string) => {
                     event: 'SIGN_IN',
                     width: window.outerWidth,
                     height: window.outerHeight,
-                    entityName: encodeURI(name)
+                    entityName: encodeURI(name),
+                    profileType: encodeURI(profileType)
                 }
             },
             '*'
@@ -26,7 +35,7 @@ enum PocketEvents {
 
 interface IData {
     event: PocketEvents;
-    token: string;
+    profile: string;
     reason: string;
 }
 
@@ -80,6 +89,7 @@ const pocketSetListeners = () => {
 export {
     pocketEventHandler,
     PocketEvents,
+    PocketProfileTypes,
     pocketSetListeners,
     pocketSignInHanlder
 };
