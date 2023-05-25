@@ -35,7 +35,9 @@ enum PocketEvents {
 
 interface IData {
     event: PocketEvents;
-    profile: string;
+    profile: {
+        [key: string]: any;
+    };
     reason: string;
 }
 
