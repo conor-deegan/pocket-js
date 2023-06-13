@@ -1,6 +1,7 @@
-enum PocketProfileTypes {
-    BASIC = 'BASIC',
-    ADVANCED_NEWS = 'ADVANCED_NEWS'
+interface PocketProfileTypes {
+    BASIC?: boolean;
+    BROWSING?: boolean;
+    BANKING?: boolean;
 }
 
 // Handle sign in
@@ -17,7 +18,7 @@ const pocketSignInHanlder = async (
                     width: window.outerWidth,
                     height: window.outerHeight,
                     entityName: encodeURI(name),
-                    profileType: encodeURI(profileType)
+                    profileType: encodeURI(JSON.stringify(profileType))
                 }
             },
             '*'
