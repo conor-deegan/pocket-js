@@ -1,7 +1,55 @@
+export interface SPEND_BY_CATEGORY {
+    INCOME?: boolean;
+    INCOME_OTHER?: boolean;
+    INCOME_REFUNDS?: boolean;
+    BILLS?: boolean;
+    CHARITY_AND_GIFTS?: boolean;
+    EATING_OUT?: boolean;
+    ENTERTAINMENT?: boolean;
+    INVESTMENT_AND_SAVINGS?: boolean;
+    GENERAL?: boolean;
+    GROCERIES?: boolean;
+    PERSONAL_CARE?: boolean;
+    HOME?: boolean;
+    INSURANCE?: boolean;
+    OTHER?: boolean;
+    SHOPPING?: boolean;
+    TRANSPORT?: boolean;
+    TRAVEL_AND_HOLIDAY?: boolean;
+    FEES_AND_CHARGES?: boolean;
+    FINANCES?: boolean;
+    TRANSFERS?: boolean;
+    SALES?: boolean;
+    REFUND?: boolean;
+    INSURANCE_SETTLEMENT?: boolean;
+    LOAN?: boolean;
+    CASH_DEPOSIT?: boolean;
+    OTHER_RECURRING?: boolean;
+    SAVINGS?: boolean;
+    INTEREST?: boolean;
+    DIVIDEND?: boolean;
+    SALARY?: boolean;
+    INVOICE?: boolean;
+    RENT?: boolean;
+    INVESTMENT?: boolean;
+    PENSION?: boolean;
+    TAX_REBATE?: boolean;
+    GRANT?: boolean;
+    RECURRING_BENEFIT?: boolean;
+    BENEFIT?: boolean;
+    TRANSFER?: boolean;
+    UNKNOWN?: boolean;
+}
+
 interface PocketProfileTypes {
     BASIC?: boolean;
     BROWSING?: boolean;
-    BANKING?: boolean;
+    BANKING: {
+        OVERVIEW?: boolean;
+        SUBSCRIPTIONS?: boolean;
+        SPEND_BY_CATEGORY?: SPEND_BY_CATEGORY;
+    };
+    UTILITIES?: boolean;
 }
 
 // Handle sign in
